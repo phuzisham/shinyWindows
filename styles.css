@@ -14,6 +14,11 @@ a {
   text-decoration: none !important;
 }
 
+button {
+  background-color: #636B73 !important;
+  border-color: #636B73 !important;
+}
+
 .centered {
   text-align: center;
 }
@@ -66,8 +71,8 @@ a {
   display: table;
   height: 450px;
   overflow: hidden;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .table-text {
