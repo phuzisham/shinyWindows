@@ -7,22 +7,20 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
-
-    <nav class="nav-container">
-      <a href="index.html"><h1 class="header-text">Shiny Windows</h1></a>
-      <div class="estimate">
-        <p>Call for a free estimate!</p>
-        <h4>406-672-7616</h4>
-      </div>
-    </nav>
-
+  <nav class="nav-container">
+    <a href="index.html"><h1 class="header-text">Shiny Windows</h1></a>
+    <div class="estimate">
+      <p>Call for a free estimate!</p>
+      <h4>406-672-7616</h4>
+    </div>
+  </nav>
   <body>
     <div class="row" id="top-content">
-      <div class="col-md-6 top-image">
+      <div class="col-md-6 table-image">
         <img src="images/masthead-box.jpg" alt="Picture of shiny windows.">
       </div>
-      <div class="col-md-6" id="about">
-        <div id="about-text">
+      <div class="col-md-6 table">
+        <div class="table-text">
           <h2>Professional window cleaning services.</h2>
           <p><b>Shiny Windows</b> has been in business for over ten years. Our attention to detail and dedication to our customers sets us well ahead of the competition. We offer residential and commercial cleaning services of windows, screens, flashing, and trim. Our team takes the upmost care to ensure high quality results.</p>
           <p>For a free estimate contact us today:</p>
@@ -32,13 +30,35 @@
         </div>
       </div>
     </div>
-    <div class="row" id="form-div">
-      <div class="col-md-6">
-
+    <div class="row">
+      <div class="col-md-6 table">
+        <div class="table-text">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="col-md-6 top-image">
+      <div class="col-md-6 table-image">
         <img src="images/large-header.jpg" alt="Row of houses and shiny windows.">
       </div>
     </div>
   </body>
+  <footer>
+    <div class="centered">
+      <p>Shiny Windows Inc ©</p>
+    </div>
+  </footer>
 </html>

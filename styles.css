@@ -7,6 +7,7 @@
 
 body {
   background-color: #AFCBD1;
+  color: #5C4B28;
 }
 
 a {
@@ -47,40 +48,36 @@ a {
   padding-top: 76px;
 }
 
-.top-image {
+.table-image {
   width: 100%;
-  height: 410px;
+  height: 450px;
   overflow: hidden;
 }
 
-.top-image img {
+.table-image img {
   position: absolute;
   right: 0;
   bottom: 0;
+  margin: 0;
 }
 
-#about {
+.table {
+  margin: 0;
   display: table;
-  height: 410px;
+  height: 450px;
   overflow: hidden;
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-#about-text {
+.table-text {
   display: table-cell;
   vertical-align: middle;
 }
 
-.form-div {
-  background-image: url("images/large-header.jpg");
-  height: 410px;
-}
-
-.dark-overlay {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.25;
+footer {
+  padding: 10px;
+  padding-top: 18px;
+  color: white;
+  background-color: #5C4B28;
 }
