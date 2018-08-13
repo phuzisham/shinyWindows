@@ -19,6 +19,14 @@ button {
   border-color: #636B73 !important;
 }
 
+form {
+  color: #636B73 !important;
+}
+
+#hidden {
+  display: none;
+}
+
 .centered {
   text-align: center;
 }

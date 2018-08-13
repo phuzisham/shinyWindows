@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
   </head>
   <nav class="nav-container">
     <a href="index.html"><h1 class="header-text">Shiny Windows</h1></a>
@@ -41,11 +42,15 @@
                 <input type="windows" class="form-control" id="windows" placeholder="Number of windows">
                 <small id="windowHelp" class="form-text text-muted">Number of windows should be counted per pane of glass.</small>
               </div>
-              <div class="form-group">
-                <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="screens" class="form-control" id="screens" placeholder="Number of window screens">
-                <small id="screenHelp" class="form-text text-muted">Leave blank if screen cleaning is not required.</small>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                <label class="form-check-label" for="inlineRadio1">Inside/Outside</label>
               </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Outside</label>
+              </div><br>
+              <small>Check outside if you don't need the inside of the windows cleaned.</small>
             </div>
             <div class="col-md-6">
               <div class="form-group">
@@ -53,10 +58,18 @@
                 <input type="email" class="form-control" id="email" placeholder="Email address">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
-              <!-- <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div> -->
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="screenCheck" name="screenCheck">
+                <label class="form-check-label" for="screenCheck">Include screen cleaning</label>
+              </div>
+              <div class="form-group" id="hidden">
+                <br>
+                <!-- <label for="exampleInputEmail1">Email address</label> -->
+                <input type="screens" class="form-control" id="screens" placeholder="Number of window screens">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <br>
               <button type="submit" class="btn btn-primary">Submit</button>
               <small id="submitHelp" class="form-text text-muted">Click submit for your free online estimate! This estimate may differ than actual cost.</small>
             </div>
@@ -73,4 +86,5 @@
       <p>Shiny Windows Inc ©</p>
     </div>
   </footer>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </html>
