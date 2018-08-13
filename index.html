@@ -33,13 +33,13 @@
     </div>
     <div class="row">
       <div class="col-md-6 table">
-        <div class="table-text">
+        <div class="table-text" id="estimate-form">
           <h2>Free online estimate:</h2>
           <form class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="windows" class="form-control" id="windows" placeholder="Number of windows">
+                <input type="windows" class="form-control" id="windows" placeholder="Number of windows" required>
                 <small id="windowHelp" class="form-text text-muted">Number of windows should be counted per pane of glass.</small>
               </div>
               <div class="form-check form-check-inline">
@@ -70,8 +70,8 @@
             </div>
             <div class="col-md-12">
               <br>
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <small id="submitHelp" class="form-text text-muted">Click submit for your free online estimate! This estimate may differ than actual cost.</small>
+              <button type="submit" class="btn btn-primary" id="submit-estimate">Submit</button>
+              <small class="form-text text-muted">Click submit for your free online estimate! This estimate may differ from the actual cost.</small>
             </div>
           </form>
         </div>
