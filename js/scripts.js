@@ -1,5 +1,5 @@
 $("#screenCheck").click(function() {
-  $("#hidden").show(1000);
+  $("#hidden1").show(1000);
   $("#screenCheckDiv").hide(1000);
 });
 
@@ -29,16 +29,19 @@ $('#submit-estimate').click(function(e) {
 
 
 function validateForm(windows, radio, email) {
-  console.log($('#screens').val());
   if ($('input[name="screenCheck"]').is(':checked')) {
     let screens = parseInt($('#screens').val());
     if (isNaN(screens)) {
       alert('Please input a numerical value.');
     } else {
-      console.log(estimateReturn(windows, radio, email, screens))
+      $('#estimateTotal').html("<h4>Your online estimate is: $"+parseInt(estimateReturn(windows, radio, email, screens))+"</h4>");
+      $("#estimate-form").hide(1000);
+      $("#estimateTotal").show(1000);
     }
   } else {
-    console.log(estimateReturn(windows, radio, email, screens))
+    $('#estimateTotal').html("<h4>Your online estimate is: $"+parseInt(estimateReturn(windows, radio, email, screens))+"</h4>");
+    $("#estimate-form").hide();
+    $("#estimateTotal").show(1000);
   }
 }
 

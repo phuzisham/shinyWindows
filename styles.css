@@ -23,7 +23,7 @@ form {
   color: #636B73 !important;
 }
 
-#hidden {
+.hidden {
   display: none;
 }
 
