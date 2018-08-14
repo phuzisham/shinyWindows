@@ -6,14 +6,24 @@ $("#screenCheck").click(function() {
   }
 });
 
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
 $('#submit-estimate').click(function(e) {
   e.preventDefault();
+  let windows = parseInt($('#windows').val());
+  let radio = $('input:radio[name="radios"]:checked').val();
+  let email = $('#email').val();
+
   if ($('#windows').val()) {
-    let x = parseInt($('#windows').val());
-    if (isNaN(x)) {
+    if (isNaN(windows)) {
       alert('Please input a numerical value.')
+    } else if (validateEmail(email) == false) {
+      alert('Please enter a valid email address.')
     } else {
-      estimateForm(x);
+      estimateForm(windows, radio, email);
     }
   } else {
     alert('Please fill out all form fields.');
@@ -21,6 +31,6 @@ $('#submit-estimate').click(function(e) {
 });
 
 
-function estimateForm(num) {
-  alert(num);
+function estimateForm(windows, radio, email) {
+  alert('success');
 }
