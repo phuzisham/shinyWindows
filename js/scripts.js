@@ -1,9 +1,6 @@
 $("#screenCheck").click(function() {
-  if ($('input[name="screenCheck"]').is(':checked')) {
-    $("#hidden").show(1000);
-  } else {
-    $("#hidden").hide(1000);
-  }
+  $("#hidden").show(1000);
+  $("#screenCheckDiv").hide(1000);
 });
 
 function validateEmail(email) {
@@ -19,11 +16,11 @@ $('#submit-estimate').click(function(e) {
 
   if ($('#windows').val()) {
     if (isNaN(windows)) {
-      alert('Please input a numerical value.')
+      alert('Please input a numerical value.');
     } else if (validateEmail(email) == false) {
-      alert('Please enter a valid email address.')
+      alert('Please enter a valid email address.');
     } else {
-      estimateForm(windows, radio, email);
+    validateForm(windows, radio, email);
     }
   } else {
     alert('Please fill out all form fields.');
@@ -31,6 +28,35 @@ $('#submit-estimate').click(function(e) {
 });
 
 
-function estimateForm(windows, radio, email) {
-  alert('success');
+function validateForm(windows, radio, email) {
+  console.log($('#screens').val());
+  if ($('input[name="screenCheck"]').is(':checked')) {
+    let screens = parseInt($('#screens').val());
+    if (isNaN(screens)) {
+      alert('Please input a numerical value.');
+    } else {
+      console.log(estimateReturn(windows, radio, email, screens))
+    }
+  } else {
+    console.log(estimateReturn(windows, radio, email, screens))
+  }
+}
+
+function estimateReturn(windows, radio, email, screens) {
+  let result = 0;
+  if (radio == 'insideRadio') {
+    windows = windows * 5;
+    if (screens) {
+      return windows + screens;
+    } else {
+      return windows;
+    }
+  } else {
+    windows = windows * 3;
+    if (screens) {
+      return windows + screens;
+    } else {
+      return windows;
+    }
+  }
 }
