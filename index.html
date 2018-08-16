@@ -4,39 +4,50 @@
     <meta charset="utf-8">
     <title>Shiny Windows | Window Cleaning Service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script type="text/javascript" src="js/jquery.js"></script>
   </head>
   <nav class="nav-container">
-    <a href="index.html"><h1 class="header-text">Shiny Windows</h1></a>
-    <div class="estimate">
-      <p>Call for a free estimate!</p>
+    <h1 class="header-text">Shiny Windows</h1>
+    <div class="call-text">
+      <p>Call for a free quote!</p>
       <h4>406-672-7616</h4>
     </div>
   </nav>
   <body>
-    <div class="row" id="top-content">
-      <div class="col-md-6 table-image">
-        <img src="images/masthead-box.jpg" alt="Picture of shiny windows.">
+    <div id="empty-space"></div>
+    <div class="flex-container">
+      <div class="image-scroll">
+        <img src="images/windows1.jpg" alt="">
+        <img src="images/windows2.jpg" alt="">
+        <img src="images/windows3.jpg" alt="">
+        <img src="images/windows4.jpg" alt="">
       </div>
-      <div class="col-md-6 table">
-        <div class="table-text">
+      <div class="flex-item table">
+        <div class="table-item">
           <h2>Professional window cleaning services.</h2>
           <p><b>Shiny Windows</b> has been in business for over ten years. Our attention to detail and dedication to our customers sets us well ahead of the competition. We offer residential and commercial cleaning services of windows, screens, flashing, and trim. Our team takes the upmost care to ensure high quality results.</p>
-          <p>For a free estimate contact us today:</p>
+          <p>For a free quote at your property contact us today:</p>
           <p>Phone: <b>406-672-7616</b></p>
           <p>Email: <b>shiny-windows@gmail.com</b></p>
           <p>Or fill out the form below for a <b>free online estimate!</b></p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 table">
-        <div class="table-text" id="estimate-form">
+    <div class="flex-container">
+      <div class="image-scroll" id="image2">
+        <img src="images/windows5.jpg" alt="">
+        <img src="images/windows6.jpg" alt="">
+        <img src="images/windows7.jpg" alt="">
+        <img src="images/windows8.jpg" alt="">
+      </div>
+      <div class="flex-item table" id="estimate-form">
+        <div class="table-item">
           <h2>Free online estimate:</h2>
-          <form class="row">
-            <div class="col-md-6">
+          <form class="form-row">
+            <div class="form-column">
               <div class="form-group">
                 <input type="windows" class="form-control" id="windows" placeholder="Number of windows" required>
                 <small id="windowHelp" class="form-text text-muted">Number of windows should be counted per pane of glass.</small>
@@ -51,8 +62,8 @@
               </div><br>
               <small>Check outside if you don't need the inside of the windows cleaned.</small>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
+            <div class="form-column">
+              <div class="form-group" id="form2">
                 <input type="email" class="form-control" id="email" placeholder="Email address">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
@@ -61,22 +72,17 @@
                 <label class="form-check-label" for="screenCheck">Include screen cleaning</label>
               </div>
               <div class="form-group hidden" id="hidden1">
-                <input type="screens" class="form-control" id="screens" placeholder="Number of window screens">
+                <input type="screens" class="form-control" id="screens" placeholder="Number of screens">
               </div>
             </div>
-            <div class="col-md-12">
-              <br>
+            <div class="submit-button">
               <button type="submit" class="btn btn-primary" id="submit-estimate">Submit</button>
               <small class="form-text text-muted">Click submit for your free online estimate! This estimate may differ from the actual cost.</small>
             </div>
           </form>
         </div>
-        <div class="results hidden table-text" id="estimateTotal">
-        </div>
       </div>
-      <div class="col-md-6 table-image">
-        <img src="images/large-header.jpg" alt="Row of houses and shiny windows.">
-      </div>
+      <div class="hidden" id="estimate-total"></div>
     </div>
   </body>
   <footer>
