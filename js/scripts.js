@@ -1,3 +1,6 @@
+let formReturnOne = "<div class='table-item'><h1 class='header-text'>Shiny Windows</h1><h4>Your online estimate is: $";
+let formReturnTwo = "</h4><h5>Call <b>406-672-7616</b> to schedule a visit to your property for a free quote or window cleaning!</h5></div>";
+
 $("#screenCheck").click(function() {
   $("#hidden1").show(1000);
   $("#screenCheckDiv").hide(1000);
@@ -27,18 +30,16 @@ $('#submit-estimate').click(function(e) {
   }
 });
 
-
 function validateForm(windows, radio, email) {
   if ($('input[name="screenCheck"]').is(':checked')) {
     let screens = parseInt($('#screens').val());
     if (isNaN(screens)) {
       alert('Please input a numerical value.');
     } else {
-      $('#estimate-form').html("<div class='table-item'>"+"<h1 class='header-text'>Shiny Windows</h1><h4>Your online estimate is: $"+parseInt(estimateReturn(windows, radio, email, screens))+"</h4><h5>Call <b>406-672-7616</b> to schedule a visit to your property for a free quote or window cleaning!</h5>"+"</div>");
+      $('#estimate-form').html(formReturnOne+parseInt(estimateReturn(windows, radio, email, screens))+formReturnTwo);
     }
   } else {
-    console.log('made it');
-    $('#estimate-form').html("<div class='table-item'>"+"<h1 class='header-text'>Shiny Windows</h1><h4>Your online estimate is: $"+parseInt(estimateReturn(windows, radio, email, screens))+"</h4><h5>Call <b>406-672-7616</b> to schedule a visit to your property for a free quote or window cleaning!</h5>"+"</div>");
+    $('#estimate-form').html(formReturnOne+parseInt(estimateReturn(windows, radio, email))+formReturnTwo);
   }
 }
 
