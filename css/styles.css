@@ -53,11 +53,11 @@ input {
 .header-text {
   font-family: 'Marck Script';
   font-weight: bold;
-  color: var(headerText);
+  color: var(--headerText);
 }
 
 .call-text {
-  color: var(callText);
+  color: var(--callText);
   position: fixed;
   top: 0;
   right: 0;
