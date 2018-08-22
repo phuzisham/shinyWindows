@@ -1,3 +1,12 @@
+:root {
+  --headerBack: #0A2012;
+  --headerText: #44A4C4;
+  --callText: #c6b047;
+  --brown: #5C4B28;
+  --bodyBack: #AFCBD1;
+  --grey: #636B73;
+}
+
 * {
   margin: 0;
   font-family: sans-serif;
@@ -6,17 +15,17 @@
 }
 
 body {
-  background-color: #AFCBD1;
-  color: #5C4B28;
+  background-color: var(--bodyBack);
+  color: var(--brown);
 }
 
 button {
-  background-color: #636B73 !important;
-  border-color: #636B73 !important;
+  background-color: var(--grey) !important;
+  border-color: var(--grey) !important;
 }
 
 form {
-  color: #636B73 !important;
+  color: var(--grey) !important;
 }
 
 input {
@@ -32,7 +41,7 @@ input {
 }
 
 .nav-container {
-  background: #0A2012;
+  background: var(--headerBack);
   height: auto;
   padding: 10px;
   position: fixed;
@@ -44,11 +53,11 @@ input {
 .header-text {
   font-family: 'Marck Script';
   font-weight: bold;
-  color: #44A4C4;
+  color: var(headerText);
 }
 
 .call-text {
-  color: #c6b047;
+  color: var(callText);
   position: fixed;
   top: 0;
   right: 0;
@@ -105,10 +114,10 @@ input {
   top: 50%;
   left: 50%;
   transform: translate( -50%, -50%);
-  animation: FadeInOut 16s infinite;
+  animation: fadeInOut 16s infinite;
 }
 
-@keyframes FadeInOut {
+@keyframes fadeInOut {
   0% {
     opacity:1;
   }
@@ -139,6 +148,19 @@ input {
   animation-delay: 0;
 }
 
+#image2 img:nth-of-type(1) {
+  animation-delay: 14.5s;
+}
+#image2 img:nth-of-type(2) {
+  animation-delay: 10.5s;
+}
+#image2 img:nth-of-type(3) {
+  animation-delay: 6.5s;
+}
+#image2 img:nth-of-type(4) {
+  animation-delay: 2.5s;
+}
+
 #image2 {
   order: 2;
 }
@@ -157,7 +179,7 @@ footer {
   padding: 10px;
   padding-top: 18px;
   color: white;
-  background-color: #5C4B28;
+  background-color: ;
 }
 
 @media only screen and (min-width: 1016px) {
