@@ -179,7 +179,7 @@ footer {
   padding: 10px;
   padding-top: 18px;
   color: white;
-  background-color: ;
+  background-color: var(--brown);
 }
 
 @media only screen and (min-width: 1016px) {
